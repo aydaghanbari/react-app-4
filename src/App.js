@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './app.css';
+import ReactDom from "react-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App () {
+    const students = [{id:1, name:"Ayda"}, {id:2, name:"Hanieh"}, {id:3, name:"Parisa"},{id:4, name:"Neda"}];
+    const student = students.map(s=> <p key={s.id}>{s.name}</p>);
+    return (
+      <div>
+          <h1>studens:</h1>
+          {student}</div>
+    );
 }
+
+
+
+
+
+
+
+
 
 export default App;
